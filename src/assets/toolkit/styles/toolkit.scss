@@ -1,7 +1,7 @@
 /**
  * Toolkit styles
  */
-@import '../../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import 'breakpoint-sass/stylesheets/breakpoint';
 
 @import 'global/vars';
 
@@ -21,7 +21,6 @@
 // Vendor
 @import 'vendor/normalize';
 @import 'global/base';
-@import '../../../../node_modules/slick-carousel/slick/slick.scss';
 
 // Basics
 @import 'components/basics/buttons';

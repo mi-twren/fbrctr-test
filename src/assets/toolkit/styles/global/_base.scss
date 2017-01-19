@@ -23,13 +23,13 @@
 }
 
 html {
-    font-family: $regular;
     box-sizing: border-box;
+    @include font();
 }
 
 body {
     position: relative;
-    color: $text;
+    color: $color-black;
     font-size: 100%;
 }
 
