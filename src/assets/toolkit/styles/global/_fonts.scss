@@ -1,0 +1,20 @@
+/**
+ * Fonts
+ */
+
+// Default
+$fallback-sans: Helvetica, Arial, sans-serif;
+
+@mixin font($weight: 'normal') {
+    font-weight: normal;
+
+    @if $weight == 'normal' {
+        font-family: $fallback-sans;
+    } @else if $weight == 'bold' {
+        font-family: $fallback-sans;
+        font-weight: bold;
+    } @else {
+        @warn 'Weight not available for this font.';
+        @error 'Weight not available for this font.';
+    }
+}

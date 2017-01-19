@@ -1,0 +1,46 @@
+// Convert breakpoint-sass units to EMs
+@include breakpoint-set('to ems', true);
+
+
+// Typography Settings
+$xl-font-size: 20px;
+$lg-font-size: 18px;
+$base-font-size: 16px;
+$sm-font-size: 14px;
+$xsm-font-size: 12px;
+$base-line-height: 1;
+
+$text-block-line-height: 1.3;
+
+// Spacing / gutters
+$base-spacing-unit: 30px;
+$half-spacing-unit: $base-spacing-unit / 2;
+$gutter-width-m: 24px;
+
+
+// Page dimensions
+$content-max-width: 1200px;
+$head-max-width: 1370px;
+
+
+// Z Index values for use with z() function
+$z-index: (
+    'base': 1,
+    'header': 100
+);
+
+
+// Breakpoints
+$hi-res: min-resolution 1.5dppx;
+$width-sm: 480px;
+$width-md: 768px;
+$width-lg: 1024px;
+$width-xl: 1200px;
+$width-xxl: 1600px;
+
+// MQPacker Order Definition
+@include mq($width-sm) {}
+@include mq($width-md) {}
+@include mq($width-lg) {}
+@include mq($width-xl) {}
+@include mq($width-xxl) {}

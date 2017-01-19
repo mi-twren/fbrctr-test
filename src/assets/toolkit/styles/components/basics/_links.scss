@@ -1,0 +1,14 @@
+/**
+ * Links
+ */
+
+// All anchors without a classname
+a:not([class]) {
+    color: currentColor;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:active, &:hover {
+
+    }
+}

@@ -1,0 +1,7 @@
+@mixin cf {
+    &:after {
+        display: table;
+        clear: both;
+        content: ' ';
+    }
+}

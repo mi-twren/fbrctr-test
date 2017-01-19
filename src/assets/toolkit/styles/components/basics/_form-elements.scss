@@ -1,0 +1,132 @@
+/**
+ * Form elements
+ */
+
+// Label
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    clear: both;
+    line-height: $base-line-height;
+
+    &--inline {
+        display: inline-block;
+
+        & + & {
+            margin-left: 1em;
+        }
+    }
+
+    &__text {
+        display: block;
+        overflow: hidden;
+    }
+}
+
+// Text inputs
+.form-field, .form-textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75em 1em;
+    background: $color-white;
+    border: 1px solid $color-black;
+    border-radius: 0;
+    font-size: 1em;
+    @include font();
+
+    &--full {
+        max-width: none;
+    }
+}
+
+// Text area
+.form-textarea {
+    min-height: em(100px);
+}
+
+// Select
+.form-select {
+    display: block;
+    position: relative;
+    max-width: em(270px);
+
+    &__input {
+        @extend .form-field;
+        position: relative;
+        height: em(37px);
+        padding: 0.063em 2.5em 0 1em;
+        padding-right: 2.5em;
+        appearance: none;
+
+        &.form-error {
+            color: currentColor !important; /* ensures text doesn't turn red in error state */            
+        }
+
+        // hide arrow on modern versions of IE
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+    // Chevron
+    &:after {
+        display: block;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        content: '';
+        pointer-events: none;
+        @include chevron(0.75em, 1px, $color-red, 'down');
+    }
+
+    &--full {
+        &, .form-select__input {
+            max-width: none;
+        }
+    }
+
+    &--tall {
+        .form-select__input {
+            height: em(45px);
+            padding: 0.75em 2.5em 0.625em 1em;
+        }
+
+        &:after {
+            top: 1.25em;
+            right: 1em;
+        }
+    }
+}
+
+// Checkbox, Radio button
+.form-checkbox,
+.form-radio {
+    display: inline-block;
+    width: auto;
+    margin: 0 $half-spacing-unit $half-spacing-unit 0;
+    float: left;
+    clear: both;
+}
+
+// Error state
+.form-error {
+    border-color: color(error);
+    color: color(error);
+}
+
+// Error label
+.form-error-message {
+    display: block;
+    color: color(error);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+// A form row
+.form-row {
+    margin-bottom: 1em;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

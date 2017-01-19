@@ -1,0 +1,59 @@
+/**
+ * Utility Classes
+ */
+
+// Text
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+// Visually hidden
+.u-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    border: 0;
+    overflow: hidden;
+}
+
+// Hidden
+.u-hidden {
+    display: none;
+}
+
+// Layout
+.u-margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.u-padding-bottom-none {
+    padding-bottom: 0;
+}
+
+// Text
+.u-uppercase {
+    text-transform: uppercase !important;
+}
+
+// Hide on large screens
+.u-hidden-lg {
+    @include mq($width-lg) {
+        display: none !important;
+    }
+}
+
+// Show only on large screens;
+.u-visible-lg {
+    display: none !important;
+
+    @include mq($width-lg) {
+        display: block !important;
+    }
+}
