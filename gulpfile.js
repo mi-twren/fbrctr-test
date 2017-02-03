@@ -18,7 +18,7 @@ const webpack = require('webpack');
 const config = {
   dev: gutil.env.dev,
   styles: {
-    browsers: 'last 1 version',
+    browsers: 'last 2 versions',
     fabricator: {
       src: 'src/assets/fabricator/styles/fabricator.scss',
       dest: 'dist/assets/fabricator/styles',
