@@ -1,8 +1,6 @@
 {
     "rules": {
-        "color-hex-case": "lower",
         "color-no-invalid-hex": true,
-        # "color-named": "never",
         "font-family-name-quotes": "always-where-recommended",
 
         "function-calc-no-unspaced-operator": true,

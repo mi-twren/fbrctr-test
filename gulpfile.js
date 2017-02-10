@@ -79,7 +79,7 @@ gulp.task('styles:toolkit', () => {
   .pipe(sass({
     includePaths: './node_modules',
   }).on('error', sass.logError))
-  .pipe(prefix('last 2 version'))
+  .pipe(prefix('last 2 versions'))
   .pipe(gulpif(!config.dev, csso()))
   .pipe(gulpif(config.dev, sourcemaps.write()))
   .pipe(gulp.dest(config.styles.toolkit.dest))
