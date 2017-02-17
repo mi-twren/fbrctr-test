@@ -125,6 +125,9 @@ gulp.task('favicon', () => {
 gulp.task('assembler', (done) => {
   assembler({
     logErrors: config.dev,
+    helpers: {
+      setVariable: require('./helpers/setVariable.js'),
+    },
     dest: config.dest,
   });
   done();
