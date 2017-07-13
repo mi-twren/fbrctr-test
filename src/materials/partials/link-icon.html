@@ -1,0 +1,27 @@
+---
+notes: |
+    Creates link with an icon
+
+    #### Properties:
+    * **href:** Target URL
+    * **label:** Link text
+    * **iconID:** id of SVG icon
+    * **direction:** Side of text the icon appears - left or right (optional)
+    * **caption:** Text to appear after link (optional)
+    * **target:** anchor target attribute - usually _blank (optional)
+
+    #### Example:
+    `{{> link-icon href="http://mysite.com" label="My Website" iconId="chevron-right" direction="right" target="_blank"}}`
+---
+<a href="{{href}}" class="link-icon{{#ifEval direction '==' 'right'}} link-icon--right{{/ifEval}}{{#if class}} {{class}}{{/if}}"{{#ifEval target '!=' null}} target="{{target}}"{{/ifEval}}>
+{{#ifEval direction '!=' 'right'}}
+    {{#if iconId}}{{> icon id=iconId}}{{/if}}
+{{/ifEval}}
+    <span class="link-icon__label">{{label}}</span>
+{{#ifEval direction '==' 'right'}}
+    {{#if iconId}}
+    {{> icon id=iconId}}
+    {{/if}}
+{{/ifEval}}
+{{#if caption}}<span class="link-icon__caption">{{caption}}</span>{{/if}}
+</a>

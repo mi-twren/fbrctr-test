@@ -1,0 +1,8 @@
+<div class="form-checkicon">
+    <input id="checkicon-{{id}}" name="{{#if name}}{{name}}{{else}}checkicon{{/if}}" type="checkbox" {{#ifEval checked '==' 'true'}} checked{{/ifEval}} {{#ifEval disabled '==' 'true'}} disabled{{/ifEval}}>
+    <label for="checkicon-{{id}}" class="form-checkicon__label">
+        {{> icon id=iconId class="form-checkicon__icon"}}
+
+        <span class="form-checkicon__text">{{title}}</span>
+    </label>
+</div>

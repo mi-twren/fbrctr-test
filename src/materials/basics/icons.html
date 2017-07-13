@@ -1,0 +1,18 @@
+---
+notes: |
+    Icons utilize the`<use>` tag and refernce SVG loaded into body of page.
+
+    #### Properties:
+    * **id:** The icon id in the content.json file
+    * **title:** string (optional)
+    * **class:** string (optional)
+
+    #### Example:
+    `{{> icon id=content.icons.social-twitter.id title="Twitter" class="icon--right"}}`
+---
+
+<div class="u-font-size-2x">
+{{#each content.icons}}
+    {{> icon id=id title=title}}
+{{/each}}
+</div>
